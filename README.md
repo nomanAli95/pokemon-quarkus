@@ -25,16 +25,31 @@ Swagger UI: `http://localhost:8080/swagger-ui`
 | `GET` | `/api/pokemon/{id}/sprite` | Front-facing pixel sprite (`image/png`) |
 | `GET` | `/api/pokemon/{id}/sprite/shiny` | Shiny front-facing sprite (`image/png`) |
 | `GET` | `/api/pokemon/{id}/sprite/back` | Back-facing sprite (`image/png`) |
-| `GET` | `/api/pokemon/{id}/card` | HTML card with sprites, artwork and stats — open in a browser |
+| `GET` | `/api/pokemon/{id}/card` | Basic HTML card — name, types, sprite, base stats |
+| `GET` | `/api/pokemon/{id}/card/full` | Full HTML card — all data, open in a browser |
+
+The full card includes:
+- **Header** — name, genus, type badges, legendary/mythical/baby flags
+- **Flavor text** — latest Pokédex entry
+- **Artwork & sprites** — official artwork + front/back/shiny pixel sprites
+- **Identity** — ID, generation, region, color, shape, habitat
+- **Physical** — height, weight, base experience, capture rate, base happiness, hatch counter, gender rate, growth rate
+- **Type matchups** — color-coded effectiveness chips (immune/¼×/½×/2×/4×) for the Pokémon's type combination
+- **Evolution chain** — full line with evolution conditions (level, item, happiness, trade, etc.)
+- **Base stats** — HP, Attack, Defense, Sp. Atk, Sp. Def, Speed with bars and total
+- **EV yield** — effort value gains per stat
+- **Abilities** — name, hidden flag, short effect description
+- **Moves** — full moveset from the latest game version, grouped by learn method (level-up, TM, egg, tutor)
 
 ### Quick visual test
 
 Open any of these in a browser after starting the app:
 
 ```
-http://localhost:8080/api/pokemon/25/card       ← Pikachu card
-http://localhost:8080/api/pokemon/25/sprite     ← pixel sprite (PNG)
-http://localhost:8080/api/pokemon/150/card      ← Mewtwo card
+http://localhost:8080/api/pokemon/25/card           ← Pikachu basic card
+http://localhost:8080/api/pokemon/25/card/full      ← Pikachu full card
+http://localhost:8080/api/pokemon/25/sprite         ← pixel sprite (PNG)
+http://localhost:8080/api/pokemon/249/card/full     ← Lugia full card (dual-type matchups)
 ```
 
 ---

@@ -1,4 +1,4 @@
-package com.zextras;
+package com.zextras.pokemon.resource;
 
 import jakarta.ws.rs.DefaultValue;
 import jakarta.ws.rs.QueryParam;

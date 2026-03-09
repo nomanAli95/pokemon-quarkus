@@ -1,4 +1,4 @@
-package com.zextras;
+package com.zextras.pokemon.basic.model;
 
 import io.quarkus.hibernate.orm.panache.PanacheEntityBase;
 import jakarta.persistence.*;
