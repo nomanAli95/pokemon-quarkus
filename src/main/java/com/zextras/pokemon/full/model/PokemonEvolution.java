@@ -33,6 +33,9 @@ public class PokemonEvolution extends PanacheEntityBase {
   @Column(name = "minimum_happiness")
   public Integer minimumHappiness;
 
+  @Column(name = "minimum_beauty")
+  public Integer minimumBeauty;
+
   @Column(name = "minimum_affection")
   public Integer minimumAffection;
 

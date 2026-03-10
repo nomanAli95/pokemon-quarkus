@@ -7,10 +7,6 @@ import org.hibernate.annotations.Immutable;
 @Entity
 @Immutable
 @Table(name = "pokemon_overview")
-@NamedQuery(
-    name = "PokemonOverview.byType",
-    query = "FROM PokemonOverview WHERE LOWER(type1) = LOWER(:type) OR LOWER(type2) = LOWER(:type)"
-)
 public class PokemonOverview extends PanacheEntityBase {
 
   @Id
